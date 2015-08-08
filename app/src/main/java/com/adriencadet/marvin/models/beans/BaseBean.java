@@ -9,7 +9,7 @@ import io.realm.annotations.PrimaryKey;
  * @class BaseBean
  * @brief
  */
-abstract class BaseBean extends RealmObject {
+public abstract class BaseBean extends RealmObject {
     @PrimaryKey
     private String id;
     private Date   createDate;
