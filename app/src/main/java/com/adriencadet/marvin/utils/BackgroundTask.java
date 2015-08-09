@@ -10,7 +10,7 @@ import java.util.UUID;
  * @class BackgroundTask
  * @brief
  */
-public abstract class BackgroundTask extends AsyncTask<Void, Void, Void> {
+public abstract class BackgroundTask<T> extends AsyncTask<Void, Void, T> {
     private String                 _id;
     private Action<BackgroundTask> _callback;
 
@@ -27,8 +27,8 @@ public abstract class BackgroundTask extends AsyncTask<Void, Void, Void> {
     }
 
     @Override
-    protected void onPostExecute(Void aVoid) {
-        super.onPostExecute(aVoid);
+    protected void onPostExecute(T t) {
+        super.onPostExecute(t);
 
         _callback.run(this);
     }
