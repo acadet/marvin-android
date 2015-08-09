@@ -2,7 +2,7 @@
 <resources>
 
     <style name="FragmentReminderListHeader" parent="MatchParentWrapContent.Horizontal">
-        <item name="android:background">@color/header_background</item>
+        <item name="android:background">@color/dark_background</item>
     </style>
 
     <style name="FragmentReminderListHeaderSection">
@@ -14,7 +14,7 @@
     </style>
 
     <style name="FragmentReminderListHeaderSectionLabel" parent="MatchParentWrapContent">
-        <item name="android:padding">5dp</item>
+        <item name="android:padding">10dp</item>
 
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/body</item>
@@ -27,11 +27,18 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">3dp</item>
 
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/red</item>
+    </style>
+
+    <style name="FragmentReminderListHeaderBorder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">5dp</item>
+
+        <item name="android:background">@drawable/header_border</item>
     </style>
 
     <style name="FragmentReminderListNoContent" parent="MatchParent">
-        <item name="android:textColor">@color/header_background</item>
+        <item name="android:textColor">@color/dark_background</item>
         <item name="android:textSize">@dimen/title</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
