@@ -1,6 +1,6 @@
 package com.adriencadet.marvin.models.dao;
 
-import com.adriencadet.marvin.models.beans.BaseBean;
+import com.adriencadet.marvin.models.beans.IBean;
 
 import org.joda.time.DateTime;
 
@@ -25,18 +25,13 @@ abstract class BaseDAO {
         return _dal;
     }
 
-    void create(BaseBean bean) {
-        getDAL().executeTransaction(
-            (dal) -> {
-                bean.setId(UUID.randomUUID().toString());
-                bean.setCreateDate(DateTime.now().toDate());
-                bean.setUpdateDate(DateTime.now().toDate());
-                dal.copyToRealm(bean);
-            }
-        );
+    void create(IBean bean) {
+        bean.setId(UUID.randomUUID().toString());
+        bean.setCreateDate(DateTime.now().toDate());
+        bean.setUpdateDate(DateTime.now().toDate());
     }
 
-    void update(BaseBean bean) {
+    void update(IBean bean) {
         bean.setUpdateDate(DateTime.now().toDate());
     }
 

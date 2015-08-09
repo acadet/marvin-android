@@ -18,7 +18,7 @@ abstract class BaseBLL {
 
     public void run(BackgroundTask task) {
         _backgroundTasks.put(task.getId(), task);
-        task.whenDone((t) -> _backgroundTasks.remove(t.getId()));
+        task.whenDone((t) -> _backgroundTasks.remove(task.getId()));
         task.execute();
     }
 

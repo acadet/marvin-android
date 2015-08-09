@@ -33,7 +33,12 @@ class TaskDAO extends BaseDAO implements ITaskDAO {
 
     @Override
     public void create(Task task) {
-        super.create(task);
+        getDAL().executeTransaction(
+            (dal) -> {
+                super.create(task);
+                dal.copyToRealm(task);
+            }
+        );
     }
 
     @Override

@@ -35,8 +35,12 @@ class ReminderDAO extends BaseDAO implements IReminderDAO {
 
     @Override
     public void create(Reminder reminder) {
-        reminder.setWasDone(false);
-        super.create(reminder);
+        getDAL().executeTransaction(
+            (dal) -> {
+                super.create(reminder);
+                dal.copyToRealm(reminder);
+            }
+        );
     }
 
     @Override

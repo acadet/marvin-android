@@ -34,7 +34,12 @@ class TodoListDAO extends BaseDAO implements ITodoListDAO {
 
     @Override
     public void create(TodoList list) {
-        super.create(list);
+        getDAL().executeTransaction(
+            (dal) -> {
+                super.create(list);
+                dal.copyToRealm(list);
+            }
+        );
     }
 
     @Override
