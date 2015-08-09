@@ -3,4 +3,8 @@
 
     <string name="reminders_active">Active</string>
     <string name="reminders_done">Done</string>
+
+    <string name="no_reminders">No reminders :(</string>
+
+    <string name="no_todolists">No lists :(</string>
 </resources>

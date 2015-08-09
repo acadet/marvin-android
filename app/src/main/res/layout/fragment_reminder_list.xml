@@ -1,12 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    style="@style/MatchParent"
+    style="@style/MatchParent.Vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/header_background"
     >
+
+    <LinearLayout
+        style="@style/FragmentReminderListHeader"
+        >
+
+        <LinearLayout
+            style="@style/FragmentReminderListHeaderSection"
+            >
+
+            <TextView
+                android:text="@string/reminders_active"
+                style="@style/FragmentReminderListHeaderSectionLabel"
+                />
+
+            <ImageView
+                style="@style/FragmentReminderListHeaderSectionBar"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/FragmentReminderListHeaderSection"
+            >
+
+            <TextView
+                android:text="@string/reminders_done"
+                style="@style/FragmentReminderListHeaderSectionLabel"
+                />
+
+            <ImageView
+                android:visibility="invisible"
+                style="@style/FragmentReminderListHeaderSectionBar"
+                tools:visibility="visible"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/fragment_reminder_list"
         style="@style/MatchParentWrapContent"
+        />
+
+    <TextView
+        android:id="@+id/fragment_reminder_list_no_content"
+        android:text="@string/no_reminders"
+        android:visibility="gone"
+        style="@style/FragmentReminderListNoContent"
+        tools:visibility="visible"
         />
 
 </LinearLayout>
