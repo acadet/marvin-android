@@ -5,7 +5,7 @@
         <item name="android:background">@drawable/main_background</item>
     </style>
 
-    <style name="LandingHeader" parent="MatchParentWrapContent">
+    <style name="LandingHeader" parent="MatchParentWrapContent.Vertical">
         <item name="android:background">@color/dark_background</item>
     </style>
 

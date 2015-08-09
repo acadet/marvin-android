@@ -6,4 +6,36 @@
         <item name="android:layout_height">@dimen/header_icon_size</item>
         <item name="android:layout_margin">15dp</item>
     </style>
+
+    <style name="FragmentListHeaderSection">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="FragmentListHeaderSectionLabel" parent="MatchParentWrapContent">
+        <item name="android:padding">10dp</item>
+
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/body</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="FragmentListHeaderSectionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">3dp</item>
+
+        <item name="android:background">@color/red</item>
+    </style>
+
+    <style name="FragmentListHeaderBorder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">5dp</item>
+
+        <item name="android:background">@drawable/header_border</item>
+    </style>
 </resources>

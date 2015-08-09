@@ -1,21 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     style="@style/LandingHeader"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     >
 
-    <ImageView
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/ic_sort"
-        style="@style/FragmentListHeaderIcon"
-        />
+    <RelativeLayout
+        style="@style/MatchParentWrapContent"
+        >
+
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_sort"
+            style="@style/FragmentListHeaderIcon"
+            />
+
+        <ImageView
+            android:id="@+id/fragment_list_header_add"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_add"
+            style="@style/FragmentListHeaderIcon"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/MatchParentWrapContent.Horizontal"
+        >
+
+        <LinearLayout
+            style="@style/FragmentListHeaderSection"
+            >
+
+            <TextView
+                android:text="@string/reminders_active"
+                style="@style/FragmentListHeaderSectionLabel"
+                />
+
+            <ImageView
+                style="@style/FragmentListHeaderSectionBar"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/FragmentListHeaderSection"
+            >
+
+            <TextView
+                android:text="@string/reminders_done"
+                style="@style/FragmentListHeaderSectionLabel"
+                />
+
+            <ImageView
+                android:visibility="invisible"
+                style="@style/FragmentListHeaderSectionBar"
+                tools:visibility="visible"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
     <ImageView
-        android:id="@+id/fragment_list_header_add"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/ic_add"
-        style="@style/FragmentListHeaderIcon"
+        style="@style/FragmentListHeaderBorder"
         />
 
 
-</RelativeLayout>
+</LinearLayout>
