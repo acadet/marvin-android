@@ -10,7 +10,7 @@ import java.util.List;
  * @class ITaskBLL
  * @brief
  */
-public interface ITaskBLL {
+public interface ITaskBLL extends IBLL {
     void create(String label, TodoList list);
 
     void update(Task task);

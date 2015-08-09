@@ -11,7 +11,7 @@ import java.util.List;
  * @class ITodoListBLL
  * @brief
  */
-public interface ITodoListBLL {
+public interface ITodoListBLL extends IBLL {
     void create(String label, TodoListColor color);
 
     void update(TodoList list);

@@ -14,9 +14,9 @@ import io.realm.Realm;
  * @brief
  */
 public class DAOFactory {
-    private static Lazy<IReminderDAO> _reminder = new Lazy<>();
-    private static Lazy<ITaskDAO>     _task     = new Lazy<>();
-    private static Lazy<ITodoListDAO> _todoList = new Lazy<>();
+    private final static Lazy<IReminderDAO> _reminder = new Lazy<>();
+    private final static Lazy<ITaskDAO>     _task     = new Lazy<>();
+    private final static Lazy<ITodoListDAO> _todoList = new Lazy<>();
 
     public static IReminderDAO reminder(Context context) {
         return _reminder.get(() -> new ReminderDAO(Realm.getInstance(context)));

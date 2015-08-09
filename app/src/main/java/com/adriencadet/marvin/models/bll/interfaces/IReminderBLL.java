@@ -10,7 +10,7 @@ import java.util.List;
  * @class IReminderBLL
  * @brief
  */
-public interface IReminderBLL {
+public interface IReminderBLL extends IBLL {
     //void create(String label, Date date);
 
     void create(String label, FriendlyDate date);
