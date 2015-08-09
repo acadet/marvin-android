@@ -48,9 +48,21 @@ class ReminderBLL extends BaseBLL implements IReminderBLL {
             case TOMORROW:
                 outcome = DateTime.now().plusDays(1);
                 break;
+            case TOMORROW_NIGHT:
+                outcome = _getMidnightOfDay().plusDays(1).plusHours(18);
+                break;
             case WEEKEND:
                 outcome = DateTime.now();
                 outcome.plusDays(DateTimeConstants.SATURDAY - outcome.getDayOfWeek());
+                break;
+            case NEXT_WEEK_END:
+                outcome = DateTime.now();
+                if (outcome.getDayOfWeek() == DateTimeConstants.SATURDAY) {
+                    outcome.plusDays(7);
+                } else {
+                    // Sunday
+                    outcome.plusDays(6);
+                }
                 break;
             case NEXT_WEEK:
                 outcome = DateTime.now().plusDays(7);
