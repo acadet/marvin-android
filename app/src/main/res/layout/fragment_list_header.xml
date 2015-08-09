@@ -34,15 +34,17 @@
             >
 
             <LinearLayout
+                android:id="@+id/fragment_list_header_active"
                 style="@style/FragmentListHeaderSection"
                 >
 
                 <TextView
-                    android:text="@string/reminders_active"
+                    android:text="@string/active_list_label"
                     style="@style/FragmentListHeaderSectionLabel"
                     />
 
                 <ImageView
+                    android:id="@+id/fragment_list_header_active_bar"
                     style="@style/FragmentListHeaderSectionBar"
                     />
 
@@ -50,15 +52,18 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/fragment_list_header_completed"
                 style="@style/FragmentListHeaderSection"
                 >
 
                 <TextView
-                    android:text="@string/reminders_done"
+                    android:id="@+id/fragment_list_header_completed_label"
+                    android:text="@string/done_reminders_label"
                     style="@style/FragmentListHeaderSectionLabel"
                     />
 
                 <ImageView
+                    android:id="@+id/fragment_list_header_completed_bar"
                     android:visibility="invisible"
                     style="@style/FragmentListHeaderSectionBar"
                     tools:visibility="visible"

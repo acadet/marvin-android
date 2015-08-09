@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Marvin</string>
 
-    <string name="reminders_active">Active</string>
-    <string name="reminders_done">Done</string>
+    <string name="active_list_label">Active</string>
+    <string name="done_reminders_label">Done</string>
+    <string name="completed_list_label">Completed</string>
 
     <string name="no_reminders">No reminders :(</string>
 
