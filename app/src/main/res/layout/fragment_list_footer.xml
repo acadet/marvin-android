@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/LandingFooter"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <ImageView
+        android:src="@drawable/ic_reminders"
+        style="@style/FragmentListFooterIcon"
+        />
+
+    <ImageView
+        android:src="@drawable/ic_todolist"
+        style="@style/FragmentListFooterIcon"
+        />
+
+    <ImageView
+        android:src="@drawable/ic_settings"
+        style="@style/FragmentListFooterIcon"
+        />
+
+</LinearLayout>

@@ -1,14 +1,12 @@
 <LinearLayout
     style="@style/LandingWrapper"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     >
 
     <FrameLayout
         android:id="@+id/landing_header"
         android:name="com.adriencadet.marvin.ui.fragments.landing.ListHeaderFragment"
         style="@style/LandingHeader"
-        tools:background="@drawable/header_background"
         />
 
     <FrameLayout
@@ -21,7 +19,6 @@
         android:id="@+id/landing_footer"
         android:name="com.adriencadet.marvin.ui.fragments.landing.ListFooterFragment"
         style="@style/LandingFooter"
-        tools:background="@drawable/footer_background"
         />
 
 </LinearLayout>

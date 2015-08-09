@@ -5,9 +5,8 @@
         <item name="android:background">@drawable/main_background</item>
     </style>
 
-    <style name="LandingHeader">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/header_height</item>
+    <style name="LandingHeader" parent="MatchParentWrapContent.Vertical">
+        <item name="android:background">@drawable/header_background</item>
     </style>
 
     <style name="LandingBody">
@@ -16,8 +15,7 @@
         <item name="android:layout_weight">1</item>
     </style>
 
-    <style name="LandingFooter">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/footer_height</item>
+    <style name="LandingFooter" parent="MatchParentWrapContent">
+        <item name="android:background">@drawable/footer_background</item>
     </style>
 </resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/MatchParent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <ListView
+        android:id="@+id/fragment_reminder_list"
+        style="@style/MatchParentWrapContent"
+        />
+
+</LinearLayout>
