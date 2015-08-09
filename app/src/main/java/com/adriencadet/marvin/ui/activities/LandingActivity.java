@@ -4,12 +4,16 @@ import android.app.Fragment;
 import android.os.Bundle;
 
 import com.adriencadet.marvin.R;
+import com.adriencadet.marvin.ui.events.AddReminderEvent;
+import com.adriencadet.marvin.ui.events.AddTodoListEvent;
 import com.adriencadet.marvin.ui.fragments.landing.ListFooterFragment;
 import com.adriencadet.marvin.ui.fragments.landing.ListHeaderFragment;
 import com.adriencadet.marvin.ui.fragments.landing.ReminderListFragment;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import de.greenrobot.event.EventBus;
 
 public class LandingActivity extends BaseActivity {
 
@@ -30,5 +34,26 @@ public class LandingActivity extends BaseActivity {
         setContentView(R.layout.activity_landing);
 
         _showReminderList();
+
+        getBus().register(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        getBus().unregister(this);
+    }
+
+    public EventBus getBus() {
+        return EventBus.getDefault();
+    }
+
+    public void onEventMainThread(AddReminderEvent event) {
+
+    }
+
+    public void onEventMainThread(AddTodoListEvent event) {
+        
     }
 }
