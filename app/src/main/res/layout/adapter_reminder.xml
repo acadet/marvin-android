@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/AdapterReminder"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <com.rey.material.widget.RadioButton
+        android:id="@+id/adapter_reminder_checkbox"
+        style="@style/AdapterReminderCheckbox"
+        />
+
+    <TextView
+        android:id="@+id/adapter_reminder_label"
+        style="@style/AdapterReminderLabel"
+        tools:text="My reminder"
+        />
+
+</LinearLayout>
