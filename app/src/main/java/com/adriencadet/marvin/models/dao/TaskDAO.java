@@ -88,4 +88,17 @@ class TaskDAO extends BaseDAO implements ITaskDAO {
     public List<Task> sortByUpdateDateDesc(String todoListId) {
         return sort(todoListId, UPDATE_DATE, false);
     }
+
+    @Override
+    public void deleteByList(String todoListId) {
+        getDAL().executeTransaction(
+            (dal) -> {
+                dal
+                    .where(Task.class)
+                    .equalTo("listId", todoListId)
+                    .findAll()
+                    .clear();
+            }
+        );
+    }
 }

@@ -17,6 +17,7 @@ class TaskBLL extends BaseBLL implements ITaskBLL {
     private ITaskDAO _dao;
 
     TaskBLL(ITaskDAO dao) {
+        super();
         _dao = dao;
     }
 
@@ -26,6 +27,7 @@ class TaskBLL extends BaseBLL implements ITaskBLL {
 
         t.setLabel(label);
         t.setListId(list.getId());
+        t.setWasCompleted(false);
 
         _dao.create(t);
     }

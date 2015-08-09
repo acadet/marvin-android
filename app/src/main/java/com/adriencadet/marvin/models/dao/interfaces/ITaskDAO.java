@@ -28,4 +28,6 @@ public interface ITaskDAO {
     List<Task> sortByUpdateDate(String todoListId);
 
     List<Task> sortByUpdateDateDesc(String todoListId);
+
+    void deleteByList(String todoListId);
 }
