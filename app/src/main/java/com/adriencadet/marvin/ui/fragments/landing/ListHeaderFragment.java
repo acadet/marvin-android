@@ -3,8 +3,8 @@ package com.adriencadet.marvin.ui.fragments.landing;
 import com.adriencadet.marvin.ui.fragments.BaseFragment;
 
 /**
- * @class ReminderListHeaderFragment
+ * @class ListHeaderFragment
  * @brief
  */
-public class ReminderListHeaderFragment extends BaseFragment {
+public class ListHeaderFragment extends BaseFragment {
 }
