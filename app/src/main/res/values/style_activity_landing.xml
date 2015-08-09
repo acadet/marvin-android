@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="LandingWrapper" parent="MatchParent.Vertical">
+        <item name="android:background">@drawable/main_background</item>
+    </style>
+
     <style name="LandingHeader">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/header_height</item>

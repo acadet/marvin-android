@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="list_red">#F44336</color>
+    <color name="list_blue">#21A9F4</color>
+    <color name="list_green">#8BC34A</color>
+    <color name="list_orange">#FB9801</color>
+    <color name="list_yellow">#FFEC00</color>
+    <color name="list_purple">#9C26B0</color>
+</resources>
