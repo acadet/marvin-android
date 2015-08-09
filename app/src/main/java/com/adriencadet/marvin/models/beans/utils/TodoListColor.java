@@ -1,4 +1,4 @@
-package com.adriencadet.marvin.models.beans.extra;
+package com.adriencadet.marvin.models.beans.utils;
 
 public class TodoListColor {
     public final static int RED = 0;

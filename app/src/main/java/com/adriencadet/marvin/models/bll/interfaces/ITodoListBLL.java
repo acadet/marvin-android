@@ -1,7 +1,7 @@
 package com.adriencadet.marvin.models.bll.interfaces;
 
 import com.adriencadet.marvin.models.beans.TodoList;
-import com.adriencadet.marvin.models.beans.extra.TodoListColor;
+import com.adriencadet.marvin.models.beans.utils.TodoListColor;
 import com.coshx.chocolatine.utils.actions.Action;
 import com.coshx.chocolatine.utils.actions.Action0;
 

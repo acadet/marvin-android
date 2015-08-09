@@ -1,7 +1,7 @@
 package com.adriencadet.marvin.models.bll;
 
 import com.adriencadet.marvin.models.beans.TodoList;
-import com.adriencadet.marvin.models.beans.extra.TodoListColor;
+import com.adriencadet.marvin.models.beans.utils.TodoListColor;
 import com.adriencadet.marvin.models.bll.interfaces.ITodoListBLL;
 import com.adriencadet.marvin.models.dao.interfaces.ITaskDAO;
 import com.adriencadet.marvin.models.dao.interfaces.ITodoListDAO;
