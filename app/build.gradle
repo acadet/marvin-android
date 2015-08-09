@@ -35,9 +35,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
     // Chocolatine
     compile(name: 'chocolatine-base-0.1.0', ext: 'aar')
-
     compile 'io.realm:realm-android:0.82.1'
     compile 'joda-time:joda-time:2.8.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'de.greenrobot:eventbus:3.0.0-beta1'
 }
 
 // Using lambda functions
