@@ -6,7 +6,7 @@
     </style>
 
     <style name="LandingHeader" parent="MatchParentWrapContent.Vertical">
-        <item name="android:background">@drawable/header_background</item>
+        <item name="android:background">@color/header_background</item>
     </style>
 
     <style name="LandingBody">
@@ -16,6 +16,6 @@
     </style>
 
     <style name="LandingFooter" parent="MatchParentWrapContent">
-        <item name="android:background">@drawable/footer_background</item>
+        <item name="android:background">@color/footer_background</item>
     </style>
 </resources>

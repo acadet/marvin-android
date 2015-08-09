@@ -2,6 +2,9 @@
 <resources>
     <color name="white">#FFFFFF</color>
 
+    <color name="header_background">#C81F1E24</color>
+    <color name="footer_background">#E6FFFFFF</color>
+
     <color name="list_red">#F44336</color>
     <color name="list_blue">#21A9F4</color>
     <color name="list_green">#8BC34A</color>
