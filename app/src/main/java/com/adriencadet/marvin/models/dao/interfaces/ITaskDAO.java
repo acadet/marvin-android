@@ -21,11 +21,11 @@ public interface ITaskDAO {
 
     void flagAsUncompleted(Task task);
 
-    List<Task> sortByLabel();
+    List<Task> sortByLabel(String todoListId);
 
-    List<Task> sortByLabelDesc();
+    List<Task> sortByLabelDesc(String todoListId);
 
-    List<Task> sortByUpdateDate();
+    List<Task> sortByUpdateDate(String todoListId);
 
-    List<Task> sortByUpdateDateDesc();
+    List<Task> sortByUpdateDateDesc(String todoListId);
 }
