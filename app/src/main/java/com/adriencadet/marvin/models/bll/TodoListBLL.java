@@ -30,7 +30,7 @@ class TodoListBLL extends BaseBLL implements ITodoListBLL {
     public void create(String label, TodoListColor color) {
         TodoList l = new TodoList();
 
-        l.setLabel(label);
+        l.setLabel(label.trim());
         l.setColor(color.toInt());
         l.setWasCompleted(false);
 
@@ -39,6 +39,7 @@ class TodoListBLL extends BaseBLL implements ITodoListBLL {
 
     @Override
     public void update(TodoList list) {
+        list.setLabel(list.getLabel().trim());
         _dao.update(list);
     }
 

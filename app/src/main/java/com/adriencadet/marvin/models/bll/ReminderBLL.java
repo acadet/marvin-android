@@ -79,7 +79,7 @@ class ReminderBLL extends BaseBLL implements IReminderBLL {
     public void create(String label, FriendlyDate date) {
         Reminder r = new Reminder();
 
-        r.setLabel(label);
+        r.setLabel(label.trim());
         r.setDate(_toDate(date));
         r.setWasDone(false);
 
@@ -88,6 +88,7 @@ class ReminderBLL extends BaseBLL implements IReminderBLL {
 
     @Override
     public void update(Reminder reminder, FriendlyDate date) {
+        reminder.setLabel(reminder.getLabel().trim());
         reminder.setDate(_toDate(date));
         _dao.update(reminder);
     }

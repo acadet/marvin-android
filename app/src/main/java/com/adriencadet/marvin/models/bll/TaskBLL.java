@@ -25,7 +25,7 @@ class TaskBLL extends BaseBLL implements ITaskBLL {
     public void create(String label, TodoList list) {
         Task t = new Task();
 
-        t.setLabel(label);
+        t.setLabel(label.trim());
         t.setListId(list.getId());
         t.setWasCompleted(false);
 
@@ -34,6 +34,7 @@ class TaskBLL extends BaseBLL implements ITaskBLL {
 
     @Override
     public void update(Task task) {
+        task.setLabel(task.getLabel().trim());
         _dao.update(task);
     }
 
