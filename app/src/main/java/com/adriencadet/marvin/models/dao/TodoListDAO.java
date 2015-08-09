@@ -6,6 +6,7 @@ import com.adriencadet.marvin.models.dao.interfaces.ITodoListDAO;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.RealmQuery;
 
 /**
  * @class TodoListDAO
@@ -17,6 +18,10 @@ class TodoListDAO extends BaseDAO implements ITodoListDAO {
 
     TodoListDAO(Realm dal) {
         super(dal);
+    }
+
+    private RealmQuery<TodoList> _onlyCompleted() {
+        return getDAL().where(TodoList.class).equalTo("wasCompleted", true);
     }
 
     public List<TodoList> sort(String field) {
@@ -84,5 +89,25 @@ class TodoListDAO extends BaseDAO implements ITodoListDAO {
     @Override
     public List<TodoList> sortByUpdateDateDesc() {
         return sort(UPDATE_DATE, false);
+    }
+
+    @Override
+    public List<TodoList> sortCompletedByLabel() {
+        return _onlyCompleted().findAllSorted(LABEL);
+    }
+
+    @Override
+    public List<TodoList> sortCompletedByLabelDesc() {
+        return _onlyCompleted().findAllSorted(LABEL, false);
+    }
+
+    @Override
+    public List<TodoList> sortCompletedByUpdateDate() {
+        return _onlyCompleted().findAllSorted(UPDATE_DATE);
+    }
+
+    @Override
+    public List<TodoList> sortCompletedByUpdateDateDesc() {
+        return _onlyCompleted().findAllSorted(UPDATE_DATE, false);
     }
 }

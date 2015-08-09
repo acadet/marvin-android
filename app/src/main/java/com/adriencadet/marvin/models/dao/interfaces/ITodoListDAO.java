@@ -28,4 +28,12 @@ public interface ITodoListDAO {
     List<TodoList> sortByUpdateDate();
 
     List<TodoList> sortByUpdateDateDesc();
+
+    List<TodoList> sortCompletedByLabel();
+
+    List<TodoList> sortCompletedByLabelDesc();
+
+    List<TodoList> sortCompletedByUpdateDate();
+
+    List<TodoList> sortCompletedByUpdateDateDesc();
 }
